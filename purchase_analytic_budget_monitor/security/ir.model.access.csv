@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_budget_warning_user,purchase.budget.warning user,model_purchase_budget_warning,purchase.group_purchase_user,1,1,1,1
+access_purchase_budget_warning_manager,purchase.budget.warning manager,model_purchase_budget_warning,purchase.group_purchase_manager,1,1,1,1

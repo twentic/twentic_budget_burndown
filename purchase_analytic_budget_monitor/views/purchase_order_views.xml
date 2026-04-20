@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         PURCHASE ORDER FORM — analytic budget progress bar
+         ============================================================ -->
+    <record id="view_purchase_order_form_budget_monitor" model="ir.ui.view">
+        <field name="name">purchase.order.form.budget.monitor</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <!--
+                Load computed fields into the view so they can be used
+                in invisible expressions and widgets below.
+            -->
+            <xpath expr="//header/field[@name='state']" position="before">
+                <field name="budget_total" invisible="1"/>
+                <field name="budget_spent" invisible="1"/>
+                <field name="budget_progress" invisible="1"/>
+                <field name="is_over_budget" invisible="1"/>
+                <field name="company_currency_id" invisible="1"/>
+            </xpath>
+
+            <!--
+                Budget progress section — inserted between the order lines
+                and the totals/notes footer.  Only visible when at least one
+                budget line is linked (budget_total > 0) and the analytic
+                accounting feature group is enabled.
+            -->
+            <xpath expr="//field[@name='order_line']" position="after">
+                <div
+                    name="budget_monitor_section"
+                    class="o_purchase_budget_monitor border rounded p-3 mt-3 mb-2"
+                    invisible="not budget_total"
+                    groups="analytic.group_analytic_accounting"
+                >
+                    <!-- Title row -->
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="fw-bold me-2">
+                            <i class="fa fa-bar-chart me-1"/>
+                            Analytic Budget
+                        </span>
+                        <!-- Over-budget badge -->
+                        <span
+                            class="badge text-bg-danger ms-1"
+                            invisible="not is_over_budget"
+                        >
+                            Over Budget
+                        </span>
+                        <!-- Warning badge (≥ 90 % but not over) -->
+                        <span
+                            class="badge text-bg-warning ms-1"
+                            invisible="budget_progress &lt; 90 or is_over_budget"
+                        >
+                            Budget Limit Approaching
+                        </span>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <field
+                        name="budget_progress"
+                        widget="progressbar"
+                        readonly="1"
+                        nolabel="1"
+                        options="{'editable': false}"
+                    />
+
+                    <!-- Amounts summary row -->
+                    <div class="d-flex justify-content-between mt-2 text-muted small">
+                        <span>
+                            Committed:
+                            <field
+                                name="budget_spent"
+                                widget="monetary"
+                                readonly="1"
+                                nolabel="1"
+                                options="{'currency_field': 'company_currency_id'}"
+                                class="fw-bold text-body"
+                            />
+                        </span>
+                        <span>
+                            Total Budget:
+                            <field
+                                name="budget_total"
+                                widget="monetary"
+                                readonly="1"
+                                nolabel="1"
+                                options="{'currency_field': 'company_currency_id'}"
+                                class="fw-bold text-body"
+                            />
+                        </span>
+                    </div>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,205 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_analytic_budget_monitor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 12:59+0000\n"
+"PO-Revision-Date: 2026-03-23 12:59+0000\n"
+"Last-Translator: TwenTIC <info@twentic.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_order_form_budget_monitor
+msgid ""
+"<span class=\"badge text-bg-danger ms-1\" invisible=\"not is_over_budget\">\n"
+"                            Over Budget\n"
+"                        </span>"
+msgstr ""
+"<span class=\"badge text-bg-danger ms-1\" invisible=\"not is_over_budget\">\n"
+"                            Budget überschritten\n"
+"                        </span>"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_order_form_budget_monitor
+msgid ""
+"<span class=\"badge text-bg-warning ms-1\" invisible=\"budget_progress &lt; 90 or is_over_budget\">\n"
+"                            Budget Limit Approaching\n"
+"                        </span>"
+msgstr ""
+"<span class=\"badge text-bg-warning ms-1\" invisible=\"budget_progress &lt; 90 or is_over_budget\">\n"
+"                            Budgetlimit wird erreicht\n"
+"                        </span>"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_order_form_budget_monitor
+msgid ""
+"<span class=\"fw-bold me-2\">\n"
+"                            <i class=\"fa fa-bar-chart me-1\"/>\n"
+"                            Analytic Budget\n"
+"                        </span>"
+msgstr ""
+"<span class=\"fw-bold me-2\">\n"
+"                            <i class=\"fa fa-bar-chart me-1\"/>\n"
+"                            Analytisches Budget\n"
+"                        </span>"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,help:purchase_analytic_budget_monitor.field_purchase_order__budget_spent
+msgid ""
+"Already committed amount (billed + confirmed POs) from the linked analytic "
+"budget lines, excluding this order when still in draft."
+msgstr ""
+"Bereits gebundener Betrag (fakturiert + bestätigte Bestellungen) aus den "
+"verknüpften analytischen Budgetzeilen, ohne diese Bestellung wenn sie noch "
+"im Entwurf ist."
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_order__budget_spent
+msgid "Budget Committed"
+msgstr "Gebundenes Budget"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__budget_progress
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_order__budget_progress
+msgid "Budget Progress (%)"
+msgstr "Budgetfortschritt (%)"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_budget_warning_form
+msgid "Budget Summary"
+msgstr "Budgetzusammenfassung"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_order__budget_total
+msgid "Budget Total"
+msgstr "Budget gesamt"
+
+#. module: purchase_analytic_budget_monitor
+#. odoo-python
+#: code:addons/purchase_analytic_budget_monitor/models/purchase_order.py:0
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_budget_warning_form
+msgid "Budget Warning"
+msgstr "Budgetwarnung"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_budget_warning_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_order_form_budget_monitor
+msgid "Committed:"
+msgstr "Gebunden:"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_order__company_currency_id
+msgid "Company Currency"
+msgstr "Unternehmenswährung"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_budget_warning_form
+msgid "Confirm Order"
+msgstr "Bestellung bestätigen"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_order__is_over_budget
+msgid "Over Budget"
+msgstr "Budget überschritten"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,help:purchase_analytic_budget_monitor.field_purchase_order__budget_progress
+msgid ""
+"Percentage of the analytic budget consumed including the current purchase "
+"order amount."
+msgstr ""
+"Prozentsatz des verbrauchten analytischen Budgets einschließlich des "
+"Betrags der aktuellen Bestellung."
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_budget_warning_form
+msgid "Projected Budget Usage (%)"
+msgstr "Projizierte Budgetnutzung (%)"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model,name:purchase_analytic_budget_monitor.model_purchase_order
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__purchase_order_id
+msgid "Purchase Order"
+msgstr "Bestellung"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model,name:purchase_analytic_budget_monitor.model_purchase_budget_warning
+msgid "Purchase Order Budget Warning"
+msgstr "Budgetwarnung für Bestellung"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,help:purchase_analytic_budget_monitor.field_purchase_order__budget_total
+msgid ""
+"Sum of budgeted amounts for all analytic budget lines linked to this order."
+msgstr ""
+"Summe der Budgetbeträge für alle mit dieser Bestellung verknüpften "
+"analytischen Budgetzeilen."
+
+#. module: purchase_analytic_budget_monitor
+#. odoo-python
+#: code:addons/purchase_analytic_budget_monitor/wizard/purchase_budget_warning.py:0
+msgid ""
+"The analytic budget for this purchase order will reach %(progress).1f%% "
+"after confirmation. Do you want to continue?"
+msgstr ""
+"Das analytische Budget für diese Bestellung wird nach der Bestätigung "
+"%(progress).1f%% erreichen. Möchten Sie fortfahren?"
+
+#. module: purchase_analytic_budget_monitor
+#: model_terms:ir.ui.view,arch_db:purchase_analytic_budget_monitor.view_purchase_order_form_budget_monitor
+msgid "Total Budget:"
+msgstr "Budget gesamt:"
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,help:purchase_analytic_budget_monitor.field_purchase_order__is_over_budget
+msgid ""
+"True when confirming this order would exceed the available analytic budget."
+msgstr ""
+"Wahr, wenn die Bestätigung dieser Bestellung das verfügbare analytische "
+"Budget überschreiten würde."
+
+#. module: purchase_analytic_budget_monitor
+#: model:ir.model.fields,field_description:purchase_analytic_budget_monitor.field_purchase_budget_warning__warning_message
+msgid "Warning Message"
+msgstr "Warnmeldung"
