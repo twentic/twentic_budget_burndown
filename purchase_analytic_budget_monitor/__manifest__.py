@@ -22,6 +22,7 @@
         'wizard/purchase_budget_warning_views.xml',
         'views/purchase_order_views.xml',
     ],
+    'images': ['static/description/main_screenshot.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
